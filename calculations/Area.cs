@@ -2,7 +2,7 @@ public class Area
 {
     public static double Square(double side)
     {
-        return side * 4;
+        return side * side;
     }
 
     public static double Rectangle(double length, double width)
@@ -32,6 +32,8 @@ public class Area
 
         return triangle_base * 0.5 * straight_height;
     }
+
+
 
     public static double Trapezium(double top, double bottom, double slant_height)
     {

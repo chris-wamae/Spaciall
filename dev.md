@@ -37,7 +37,12 @@ A user can fail to provide the name of the figure or the type of calculation the
 1. Perimeter
 2. Area
 3. Volume
-4. Conversions
+
+### Conversions
+
+1. Same units during calculations
+2. Converting results to different units
+
 
 
 ### Predictions
