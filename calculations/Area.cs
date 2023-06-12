@@ -15,18 +15,31 @@ public class Area
         return Math.PI * radius * radius;
     }
 
+    public double Triangle_right_angled(double triagle_base, double straight_height){
+
+        return 0.5 * triagle_base * straight_height;
+
+    }
+
+    public double Triangle_isosceles(double triangle_base,double straight_height){
+
+        return 0.5 *triangle_base * straight_height;
+    }
+
+    public double Triangle_isosceles_slant(double triangle_base, double slant_height){
+
+        double straight_height = Calculation_helper.Triangle_height(slant_height, triangle_base * 0.5);
+
+        return triangle_base * 0.5 * straight_height;
+    }
+
     public static double Trapezium(double top, double bottom, double slant_height)
     {
         double difference = Math.Sqrt((top - bottom) * (top - bottom));
 
         double triangle_base = difference / 2;
 
-        double hypotenuse_square = slant_height * slant_height;
-
-        double base_square = triangle_base * triangle_base;
-
-        double straight_height = Math.Sqrt(hypotenuse_square - base_square);
-
+        double straight_height = Calculation_helper.Triangle_height(slant_height, triangle_base);
 
         return (0.5 * (top + bottom) * straight_height);
 
