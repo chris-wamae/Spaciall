@@ -41,3 +41,4 @@ A user can fail to provide the name of the figure or the type of calculation the
 
 
 ### Predictions
+1. Type of calculation required

@@ -1,0 +1,15 @@
+/home/wamae/development/projects/personal/Spaciall/bin/Debug/net7.0/Spaciall
+/home/wamae/development/projects/personal/Spaciall/bin/Debug/net7.0/Spaciall.deps.json
+/home/wamae/development/projects/personal/Spaciall/bin/Debug/net7.0/Spaciall.runtimeconfig.json
+/home/wamae/development/projects/personal/Spaciall/bin/Debug/net7.0/Spaciall.dll
+/home/wamae/development/projects/personal/Spaciall/bin/Debug/net7.0/Spaciall.pdb
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.csproj.AssemblyReference.cache
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.GeneratedMSBuildEditorConfig.editorconfig
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.AssemblyInfoInputs.cache
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.AssemblyInfo.cs
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.csproj.CoreCompileInputs.cache
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.dll
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/refint/Spaciall.dll
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.pdb
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/Spaciall.genruntimeconfig.cache
+/home/wamae/development/projects/personal/Spaciall/obj/Debug/net7.0/ref/Spaciall.dll
