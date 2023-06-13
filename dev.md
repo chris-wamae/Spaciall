@@ -26,10 +26,9 @@ A user can fail to provide the name of the figure or the type of calculation the
 ## Pseudo-code 
 
 ### Messages
-1. Welcome message
-2. Goodbye message
-3. Help messages
-4. Explanation messages
+1. General messages
+2. Help messages
+3. Explanation messages
 
 
 
