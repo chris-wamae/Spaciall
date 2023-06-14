@@ -10,5 +10,7 @@
 // Console.WriteLine(Areas.Centimetres(10000,"m"));
 // Console.WriteLine(Areas.Millimetres(10000,"cm"));
 // Console.WriteLine(Volumes.Kilometres(1,"m"));
-Console.WriteLine(General.Calculation_message());
+int calulation_choice = General.Calculation_message();
+int shape_choice = General.Shape_message(calulation_choice);
+
 
