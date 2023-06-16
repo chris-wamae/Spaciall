@@ -67,7 +67,7 @@ public class General
         
         String result_units = Choose_unit();
 
-        Action find_measurement = () =>
+         double find_measurement()
             {
                 Console.WriteLine("What are the measurements?");
 
@@ -110,13 +110,13 @@ public class General
                 {
                 };
 
-                Console.WriteLine("These are the units" + measurement);
+            return measurement;
 
             };
 
+        List <double> measurements = new List<double>();
 
-
-        find_measurement.Invoke();
+        measurements.Add(find_measurement());
 
         bool other_measurement = true;
 
@@ -132,7 +132,11 @@ public class General
 
             if (new_measurement == 1)
             {
-                find_measurement.Invoke();
+                measurements.Add(find_measurement());
+
+               foreach(double meas in measurements){
+                Console.WriteLine(meas);
+               }
             }
             else
             {
