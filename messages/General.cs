@@ -1,6 +1,6 @@
 public class General
 {
-    public static int Calculation_message()
+    public static double Calculation_message()
     {
         Console.WriteLine("Hi!");
 
@@ -14,14 +14,14 @@ public class General
 
         Console.WriteLine("Enter a number and hit enter to continue...");
 
-        int user_choice;
+        double user_choice;
 
         user_choice = Convert.ToInt32(Console.ReadLine());
 
         return user_choice;
     }
 
-    public static int Shape_message(int calculation)
+    public static double Shape_message(double calculation)
     {
         String choice = "";
         switch (calculation)
@@ -41,26 +41,21 @@ public class General
 
         String[] shapes = { "Square", "Rectangle", "Triangle", "Trapezium", "Circle" };
 
-        int counter = 1;
+        double counter = 1;
         foreach (String shape in shapes)
         {
             Console.WriteLine(counter + "." + shape);
             counter = counter + 1;
         }
 
-        int shape_choice = Convert.ToInt32(Console.ReadLine());
+        double shape_choice = Convert.ToInt32(Console.ReadLine());
 
         return shape_choice;
     }
 
     public static void Units_message()
     {
-     Action find_measurement = () => {
-        Console.WriteLine("What are the measurements?");
-
-        Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("In what unit is this measurement?");
+        Console.WriteLine("What units would you like your results in?");
 
         Console.WriteLine("1.Kilometres");
 
@@ -69,13 +64,59 @@ public class General
         Console.WriteLine("3.Centimetres");
 
         Console.WriteLine("4.Millimetres");
-
-        Convert.ToInt32(Console.ReadLine());
-
-     };
-     find_measurement.Invoke();
-
         
+        String result_units = Choose_unit();
+
+        Action find_measurement = () =>
+            {
+                Console.WriteLine("What are the measurements?");
+
+                double measurement = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("In what unit is this measurement?");
+
+                Console.WriteLine("1.Kilometres");
+
+                Console.WriteLine("2.Metres");
+
+                Console.WriteLine("3.Centimetres");
+
+                Console.WriteLine("4.Millimetres");
+
+                String measurement_unit = Choose_unit();
+
+
+                if (measurement_unit != result_units && measurement_unit == "km")
+                {
+
+                    measurement = Units.Kilometres(measurement, result_units);
+                }
+                else if (measurement_unit != result_units && measurement_unit == "m")
+                {
+
+                    measurement = Units.Metres(measurement, result_units);
+                }
+                else if (measurement_unit != result_units && measurement_unit == "cm")
+                {
+
+                    measurement = Units.Centimetres(measurement, result_units);
+                }
+                else if (measurement_unit != result_units && measurement_unit == "mm")
+                {
+
+                    measurement = Units.Millimetres(measurement, result_units);
+                }
+                else
+                {
+                };
+
+                Console.WriteLine("These are the units" + measurement);
+
+            };
+
+
+
+        find_measurement.Invoke();
 
         bool other_measurement = true;
 
@@ -86,7 +127,8 @@ public class General
             Console.WriteLine("1.Yes");
 
             Console.WriteLine("2.No");
-            int new_measurement = Convert.ToInt32(Console.ReadLine());
+
+            double new_measurement = Convert.ToInt32(Console.ReadLine());
 
             if (new_measurement == 1)
             {
@@ -100,4 +142,33 @@ public class General
 
         }
     }
+
+    public static String Choose_unit()
+    {
+
+        String units = "";
+
+        double unit_choice = Convert.ToInt32(Console.ReadLine());
+
+
+        switch (unit_choice)
+        {
+            case 1:
+                units = "km";
+                break;
+            case 2:
+                units = "m";
+                break;
+            case 3:
+                units = "cm";
+                break;
+            case 4:
+                units = "mm";
+                break;
+        }
+
+        return units;
+
+    }
+
 }
