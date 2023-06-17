@@ -39,14 +39,27 @@ public class GetInput
 
         Console.WriteLine($"What would you like to calculate the {choice} for?");
 
-        String[] shapes = { "Square", "Rectangle", "Triangle", "Trapezium", "Circle" };
+        String[] shapes = { "Square", "Rectangle", "Triangle", "Circle"};
+        String[] volume_shapes = { "Square", "Rectangle", "Triangle", "Circle", "Cone","Square Pyramid"};
 
         double counter = 1;
-        foreach (String shape in shapes)
+        if(calculation == 3){     foreach (String shape in volume_shapes)
         {
             Console.WriteLine(counter + "." + shape);
             counter = counter + 1;
         }
+
+          
+        }
+        else{
+         foreach (String shape in shapes)
+        {
+            Console.WriteLine(counter + "." + shape);
+            counter = counter + 1;
+        }
+
+        }
+   
 
         double shape_choice = Convert.ToInt32(Console.ReadLine());
 

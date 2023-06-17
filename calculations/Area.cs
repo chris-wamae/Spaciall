@@ -15,18 +15,18 @@ public class Area
         return Math.PI * radius * radius;
     }
 
-    public double Triangle_right_angled(double triagle_base, double straight_height){
+    public static double Triangle_right_angled(double triagle_base, double straight_height){
 
         return 0.5 * triagle_base * straight_height;
 
     }
 
-    public double Triangle_isosceles(double triangle_base,double straight_height){
+    public static double Triangle_isosceles(double triangle_base,double straight_height){
 
         return 0.5 *triangle_base * straight_height;
     }
 
-    public double Triangle_isosceles_slant(double triangle_base, double slant_height){
+    public static double Triangle_isosceles_slant(double triangle_base, double slant_height){
 
         double straight_height = Calculation_helper.Triangle_height(slant_height, triangle_base * 0.5);
 

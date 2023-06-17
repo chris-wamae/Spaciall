@@ -14,7 +14,8 @@
 //     {(3, 2), () => Console.WriteLine("reueuru")},
 //     {(3, 3), () => Console.WriteLine("Heydede")},
 //     {(3, 4), () => Console.WriteLine("Heykfkfkfkfk")},
-//     {(3, 5), () => Console.WriteLine("Heydeffe")}
+//     {(3, 5), () => Console.WriteLine("Heydeffe")},
+//     {(3, 6), () => Console.WriteLine("Heydeffe")},
 // };
 
 // Dictionary<(int, int), Action> choiceCalculation = new Dictionary<(int, int), Action>
@@ -33,7 +34,8 @@
 //     {(3, 2), () => Console.WriteLine("reueuru")},
 //     {(3, 3), () => Console.WriteLine("Heydede")},
 //     {(3, 4), () => Console.WriteLine("Heykfkfkfkfk")},
-//     {(3, 5), () => Console.WriteLine("Heydeffe")}
+//     {(3, 5), () => Console.WriteLine("Heydeffe")},
+//     {(3, 6), () => Console.WriteLine("Heydeffe")},
 // };
 
 

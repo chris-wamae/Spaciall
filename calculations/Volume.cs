@@ -29,6 +29,14 @@ public class Volume : Area {
         return Volume.Square(side) * 1/3 * height; 
 
     }
+    
+    public static double Triangular_pyramid(double ca_base, double ca_height,double height){
+
+        return Volume.Triangle_isosceles(ca_base,ca_height) * 1/3 * height; 
+
+    }
+    
+
 
     public  static double Cone_slant(double slant_height, double radius){
         

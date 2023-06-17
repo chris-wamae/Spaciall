@@ -20,7 +20,7 @@ public class Perimeter
         return (slant_side * 2) + (top + bottom);
     }
 
-    public static double Trapezium(double slant_side, double top, double bottom, double straight_side)
+    public static double Trapezium_straight(double slant_side, double top, double bottom, double straight_side)
     {
 
         return slant_side + top + bottom + straight_side;
