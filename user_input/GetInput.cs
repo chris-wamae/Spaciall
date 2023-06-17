@@ -1,6 +1,6 @@
-public class General
+public class GetInput
 {
-    public static double Calculation_message()
+    public static double Calculation_type()
     {
         Console.WriteLine("Hi!");
 
@@ -21,7 +21,7 @@ public class General
         return user_choice;
     }
 
-    public static double Shape_message(double calculation)
+    public static double Shape_type(double calculation)
     {
         String choice = "";
         switch (calculation)
@@ -53,7 +53,7 @@ public class General
         return shape_choice;
     }
 
-    public static void Units_message()
+    public static List<double> Figure_measurements()
     {
         Console.WriteLine("What units would you like your results in?");
 
@@ -69,7 +69,7 @@ public class General
 
          double find_measurement()
             {
-                Console.WriteLine("What are the measurements?");
+                Console.WriteLine("What are the Measurements?");
 
                 double measurement = Convert.ToInt32(Console.ReadLine());
 
@@ -114,9 +114,9 @@ public class General
 
             };
 
-        List <double> measurements = new List<double>();
+        List <double> Measurements = new List<double>();
 
-        measurements.Add(find_measurement());
+        Measurements.Add(find_measurement());
 
         bool other_measurement = true;
 
@@ -132,9 +132,9 @@ public class General
 
             if (new_measurement == 1)
             {
-                measurements.Add(find_measurement());
+                Measurements.Add(find_measurement());
 
-               foreach(double meas in measurements){
+               foreach(double meas in Measurements){
                 Console.WriteLine(meas);
                }
             }
@@ -145,6 +145,8 @@ public class General
 
 
         }
+
+        return Measurements;
     }
 
     public static String Choose_unit()
