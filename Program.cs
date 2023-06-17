@@ -42,6 +42,8 @@
 
 double calculationChoice = GetInput.Calculation_type();
 double shapeChoice = GetInput.Shape_type(calculationChoice);
+InputExplanations.SquarePermieter();
+
 // if (choiceCalculations.TryGetValue((calculationChoice, shapeChoice), out Action action))
 // {
 //     action.Invoke();
