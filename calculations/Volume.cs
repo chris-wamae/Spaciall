@@ -6,31 +6,45 @@ public class Volume : Area {
 
     }
 
-    public static double Cuboid(double length, double width,double height){
+    public static double Cuboid(params double[] sides){
         
+        double length = sides[0];
+        double width = sides[1];
+        double height = sides[2];
+
         return Volume.Rectangle(length, width) *  height;
 
     }
 
-    public static double Sphere(double radius){
+    public static double Sphere(params double[] radius){
 
-        return Volume.Circle(radius) * 4/3 * radius;
+        return Volume.Circle(radius[0]) * 4/3 * radius[0];
 
     }
 
-    public static double Cone(double radius, double height){
+    public static double Cone(params double[] sides){
+        
+        double radius = sides[0];
+        double height = sides[1];
 
         return Volume.Circle(radius) * 1/3 * height;
 
     }
 
-    public static double Square_pyramid(double side, double height){
-
-        return Volume.Square(side) * 1/3 * height; 
+    public static double Square_pyramid(params double[] sides){
+        
+        double square_sideside = sides[0];
+        double vertical_height = sides[1];
+    
+        return Volume.Square(square_sideside) * 1/3 * vertical_height; 
 
     }
     
-    public static double Triangular_pyramid(double ca_base, double ca_height,double height){
+    public static double Triangular_pyramid(params double[] sides){
+
+        double ca_base = sides[0];
+        double ca_height = sides[1];
+        double height = sides[2];
 
         return Volume.Triangle_right_angled(ca_base,ca_height) * 1/3 * height; 
 
@@ -38,7 +52,11 @@ public class Volume : Area {
     
 
 
-    public  static double Cone_slant(double slant_height, double radius){
+    public  static double Cone_slant(params double[] sides){
+
+        double slant_height = sides[0];
+
+        double radius = sides[1];
         
         double straight_height = Calculation_helper.Triangle_height(slant_height, radius);
         
@@ -46,7 +64,11 @@ public class Volume : Area {
 
     } 
 
-    public static double Square_pyramid_slant(double slant_height, double side){
+    public static double Square_pyramid_slant(params double[] sides){
+
+        double slant_height = sides[0];
+
+        double side = sides[1];
 
         double straight_height =  Calculation_helper.Triangle_height(slant_height, side);
 
