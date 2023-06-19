@@ -21,11 +21,6 @@ public class Area
 
     }
 
-    public static double Triangle_isosceles(double triangle_base,double straight_height){
-
-        return 0.5 *triangle_base * straight_height;
-    }
-
     public static double Triangle_isosceles_slant(double triangle_base, double slant_height){
 
         double straight_height = Calculation_helper.Triangle_height(slant_height, triangle_base * 0.5);
@@ -35,7 +30,7 @@ public class Area
 
 
 
-    public static double Trapezium(double top, double bottom, double slant_height)
+    public static double Trapezium_slant(double top, double bottom, double slant_height)
     {
         double difference = Math.Sqrt((top - bottom) * (top - bottom));
 

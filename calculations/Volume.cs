@@ -1,13 +1,13 @@
 public class Volume : Area {
     
-    public static double Cube(double side){
-
-       return Volume.Square(side) * side;
+    public static double Cube(params double[] sides){
+        double square_side = sides[0];
+       return Volume.Square(square_side) * square_side;
 
     }
 
     public static double Cuboid(double length, double width,double height){
-
+        
         return Volume.Rectangle(length, width) *  height;
 
     }
@@ -32,7 +32,7 @@ public class Volume : Area {
     
     public static double Triangular_pyramid(double ca_base, double ca_height,double height){
 
-        return Volume.Triangle_isosceles(ca_base,ca_height) * 1/3 * height; 
+        return Volume.Triangle_right_angled(ca_base,ca_height) * 1/3 * height; 
 
     }
     
