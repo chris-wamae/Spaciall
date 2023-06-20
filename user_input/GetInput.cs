@@ -39,7 +39,8 @@ public class GetInput
 
         Console.WriteLine($"What would you like to calculate the {choice} for?");
 
-        String[] shapes = { "Square", "Rectangle", "Triangle", "Circle" };
+        String[] perimeter_shapes = { "Square", "Rectangle", "Triangle", "Circle","Trapezium","Trapezium with straight side" };
+        String[] area_shapes = { "Square", "Rectangle", "Triangle", "Triangle using slant side","Trapezium","Trapezium using slant side" };
         String[] volume_shapes = { "Cube", "Cuboid", "Sphere", "Cone", "Cone using diagonal", "Square Pyramid","Square Pyramid using diagonal","Triangular Pyramid" };
 
         double counter = 1;
@@ -53,9 +54,18 @@ public class GetInput
 
 
         }
-        else
+        else if(calculation == 2)
         {
-            foreach (String shape in shapes)
+            foreach (String shape in area_shapes)
+            {
+                Console.WriteLine(counter + "." + shape);
+                counter = counter + 1;
+            }
+
+        }
+
+        else{
+                 foreach (String shape in perimeter_shapes)
             {
                 Console.WriteLine(counter + "." + shape);
                 counter = counter + 1;
