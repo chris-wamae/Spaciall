@@ -1,10 +1,12 @@
 public class Area
-{
+{   
+    //finds the area of a square when provided with measurements and returns the result
     public static double Square(params double[] sides)
     {
         return sides[0] * sides[0];
     }
-
+    
+    //finds the area of a rectangle when provided with measurements and returns the result
     public static double Rectangle(params double[] sides)
     {
         double length = sides[0];
@@ -12,12 +14,14 @@ public class Area
 
         return length * width;
     }
-
+    
+     //finds the area of a circle when provided with measurements and returns the result
     public static double Circle(params double[] radius)
     {
         return Math.PI * radius[0] * radius[0];
     }
-
+     
+    //finds the area of a triangle when provided with measurements and returns the result
     public static double Triangle_right_angled(params double[] sides)
     {
 
@@ -28,7 +32,8 @@ public class Area
         return 0.5 * triagle_base * straight_height;
 
     }
-
+    
+    //finds the area of a triangle using the diagonal when provided with measurements and returns the result
     public static double Triangle_isosceles_slant(params double[] sides)
     {
 
@@ -41,7 +46,7 @@ public class Area
     }
 
 
-
+    //finds the area of a trapezium using the diagonal when provided with measurements and returns the result
     public static double Trapezium_slant(params double[] sides)
     {
         double top = sides[0];
@@ -57,7 +62,8 @@ public class Area
         return (0.5 * (top + bottom) * straight_height);
 
     }
-
+     
+     //finds the area of a trapezium when provided with measurements and returns the result
     public static double Trapezium_straight(params double[] sides)
     {
         double top = sides[0];

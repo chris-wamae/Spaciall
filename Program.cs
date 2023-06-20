@@ -1,8 +1,10 @@
-﻿
+﻿//allows a user to select a type of calculation eg. area
 double calculationChoice = GetInput.Calculation_type();
 
+//allows a user to pick a geometrical figure for their calculation eg. square
 double shapeChoice = GetInput.Shape_type(calculationChoice);
 
+//stores explanations on how to perfom calculations to be displayed to the user
 Dictionary<(double, double), Action> choiceExplanation = new Dictionary<(double, double), Action>
 {
     {(1, 1), () => InputExplanations.SquarePermieter()},
@@ -28,6 +30,7 @@ Dictionary<(double, double), Action> choiceExplanation = new Dictionary<(double,
     {(3, 8), () => InputExplanations.Triangular_pyramid()}
 };
 
+//displays an explanation depending on the users choices
 if (choiceExplanation.TryGetValue((calculationChoice, shapeChoice), out Action action))
 {
     action.Invoke();
@@ -38,10 +41,11 @@ else
 }
 
 
-
+//this is  a list with all the measurements a user has entered
 List<double> Measurements = GetInput.Figure_measurements();
 
 
+//stores the calculations that can be done by the application 
 Dictionary<(double, double), Action> choiceCalculation = new Dictionary<(double, double), Action>
 {
     {(1, 1), () => Console.WriteLine(Perimeter.Square(Measurements.ToArray()))},
@@ -67,13 +71,7 @@ Dictionary<(double, double), Action> choiceCalculation = new Dictionary<(double,
     {(3, 8), () => Console.WriteLine(Volume.Triangular_pyramid(Measurements.ToArray()))}
 };
 
-
-
-
-
-
-
-
+//invokes the correct calculation depending on the users choice
 if (choiceCalculation.TryGetValue((calculationChoice, shapeChoice), out Action calculation))
 {
     calculation.Invoke();

@@ -1,7 +1,7 @@
 
 public class Units
 {
-
+     //coverts straight distance from Millimetres to any other measurment and returns the result
     public static double Millimetres(double amount, String unit)
     {
         switch (unit)
@@ -18,7 +18,8 @@ public class Units
         }
         return amount;
     }
-
+    
+     //coverts straight distance from Centimetres to any other measurment and returns the result
     public static double Centimetres(double amount, String units)
     {
         switch (units)
@@ -36,7 +37,8 @@ public class Units
         return amount;
 
     }
-
+    
+     //coverts straight distance from Metres to any other measurment and returns the result
     public static double Metres(double amount, String units)
     {
 
@@ -54,7 +56,8 @@ public class Units
         }
      return amount;
     }
-
+    
+    //coverts straight distance from Kilometres to any other measurment and returns the result
     public static double Kilometres(double amount, String units){
 
       switch(units){

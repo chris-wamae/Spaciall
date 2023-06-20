@@ -1,5 +1,6 @@
 public class GetInput
 {
+    //gets the type of calculation the user would like to perfom and stores it 
     public static double Calculation_type()
     {
         Console.WriteLine("Hi!");
@@ -20,7 +21,7 @@ public class GetInput
 
         return user_choice;
     }
-
+    //gets the type of shape a user would like to perfom a calculation for and stores it
     public static double Shape_type(double calculation)
     {
         String choice = "";
@@ -78,7 +79,10 @@ public class GetInput
 
         return shape_choice;
     }
-
+    
+    //gets the type of measurement a user would like their result in
+    //gets measurements for a shape and converts them to the result units
+    //adds the measurements to a list
     public static List<double> Figure_measurements()
     {
         Console.WriteLine("What units would you like your results in?");
@@ -143,9 +147,11 @@ public class GetInput
         List<double> Measurements = new List<double>();
 
         Measurements.Add(find_measurement());
+        
+        //checks if the user wants to provide an additional measurement
 
         bool other_measurement = true;
-
+        
         while (other_measurement == true)
         {
             Console.WriteLine("Is there any other measurement?");
@@ -159,11 +165,6 @@ public class GetInput
             if (new_measurement == 1)
             {
                 Measurements.Add(find_measurement());
-
-                foreach (double meas in Measurements)
-                {
-                    Console.WriteLine(meas);
-                }
             }
             else
             {
@@ -175,7 +176,8 @@ public class GetInput
 
         return Measurements;
     }
-
+    
+    //allows a user to choose the units for their results and measurments
     public static String Choose_unit()
     {
 

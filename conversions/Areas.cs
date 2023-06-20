@@ -1,5 +1,6 @@
 public class Areas
 {
+    //coverts area from Millimetres to any other measurment and returns the result
     public static double Millimetres(double area, String units)
     {
         switch (units)
@@ -16,6 +17,8 @@ public class Areas
         }
         return area;
     }
+     
+     //coverts area from Centimetres to any other measurment and returns the result
 
     public static double Centimetres(double area, String units)
     {
@@ -36,7 +39,8 @@ public class Areas
         return area;
 
     }
-
+     
+     //coverts area from Metres to any other measurment and returns the result
     public static double Metres(double area, String units)
     {
 
@@ -55,7 +59,8 @@ public class Areas
         return area;
 
     }
-
+    
+    //coverts area from Kilometres to any other measurment and returns the result
     public static double Kilometres(double area, String units)
     {
         switch (units)

@@ -1,5 +1,6 @@
+   //provides explanations on the requirements to perfom different calculations using the application
 public class InputExplanations{
-   
+
    public static void TrapeziumPerimeter(){
     Console.WriteLine();
     Console.WriteLine("To calculate this, when prompted:");
