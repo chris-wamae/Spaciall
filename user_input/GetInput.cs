@@ -40,7 +40,7 @@ public class GetInput
         Console.WriteLine($"What would you like to calculate the {choice} for?");
 
         String[] shapes = { "Square", "Rectangle", "Triangle", "Circle" };
-        String[] volume_shapes = { "Square", "Rectangle", "Triangle", "Circle", "Cone", "Square Pyramid" };
+        String[] volume_shapes = { "Cube", "Cuboid", "Sphere", "Cone", "Cone using diagonal", "Square Pyramid","Square Pyramid using diagonal","Triangular Pyramid" };
 
         double counter = 1;
         if (calculation == 3)
